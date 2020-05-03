@@ -1,0 +1,65 @@
+ /* .main { */
+    /* position: relative; */
+    /* width: 100%;
+    height: 30%; */
+  /* }  */
+
+
+  
+/* .image {
+    width: auto;
+    /* position: relative; */
+    /* display: block; */
+    /* width: 100%; */
+    /* height: auto; 
+    background-color: blue;
+  }  */
+
+
+
+  /* buttons: {
+    display: 'flex',
+    justifyContent: 'center', 
+    alignItems: 'row',
+
+},
+
+buttonJob:{
+
+    position: 'absolute',
+    top: '80%',
+    left: '50%',
+    // transform: 'translate(-50%, -50%)',
+  
+    borderRadius: 50,
+    textAlign: 'center',
+    background: 'white',
+    texTransform: 'uppercase',
+    padding: 10,
+    display: 'inlineBlock',
+    width: 200,
+    fontFamily: 'Sequel100wide'
+},
+
+buttonAbout:{
+    
+    position: 'absolute',
+    top: '80%',
+    right: '50%',
+    
+    // transform: 'translate(-50%, -50%)',
+
+
+    textAlign: 'center',
+    borderRadius: 50,
+    background: 'black',
+    color:'white',
+    // top: -150,
+    width: 200,
+    padding: 10, 
+    whiteSpace: 'nowrap',
+    fontFamily: 'Sequel100wide',
+   
+}, */
+
+

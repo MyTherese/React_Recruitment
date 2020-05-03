@@ -1,0 +1,52 @@
+.body{
+  position:'relative'
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* header  */
+
+
+.nav {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+  height: 100px;
+  background-color:white;
+}
+
+
+.logo {
+  display:inline-block;
+  /* width:px; */
+  position: relative;
+  height: 100px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  /* padding: 0;
+  margin-top:5px; */
+}
+
+  
+
+/* upload.js  */
+ .upload {
+  padding: 50px;
+ 
+ }
+
+ 
+
+
+
+
+
+
