@@ -1,9 +1,9 @@
-import Jasmine from './pictures/Jasmine.jpg';
-import Marie from './pictures/Marie.jpg';
-import PatrikN from './pictures/PatrikN.jpg';
-import Patrik from './pictures/Patrik.jpg';
-import Sebastian from './pictures/Sebastian.jpg';
-import Rosen from './pictures/Rosen.jpg';
+import Jasmine from '../pictures/Jasmine.jpg';
+import Marie from '../pictures/Marie.jpg';
+import PatrikN from '../pictures/PatrikN.jpg';
+import Patrik from '../pictures/Patrik.jpg';
+import Sebastian from '../pictures/Sebastian.jpg';
+import Rosen from '../pictures/Rosen.jpg';
 
 
  

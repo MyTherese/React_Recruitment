@@ -7,6 +7,8 @@ import Social from './Social';
 
 import StickyHeader from './header/StickyHeader';
 import Departments from './Departments';
+import AboutUs from './aboutUs/AboutUs';
+
 import '../App.css';
 
 
@@ -41,7 +43,7 @@ class Home extends React.Component {
                 <BigImage />
                 <Social />
                 <Departments />
-                {/* <AboutUs /> */}
+                <AboutUs />
 
                 {/* <DragBox handleDropping={this.handleDropping}>
                     <div>{this.state.listOfFiles}</div>

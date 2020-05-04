@@ -1,8 +1,8 @@
-import React, { Component } from './node_modules/react';
-import { withStyles} from './node_modules/@material-ui/core/styles';
-import { Grid, Typography } from "./node_modules/@material-ui/core";
-import CardContent from "./node_modules/@material-ui/core/CardContent";
-import CardMedia from "./node_modules/@material-ui/core/CardMedia";
+import React, { Component } from 'react';
+import { withStyles} from '@material-ui/core/styles';
+import { Grid, Typography } from '@material-ui/core';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import images from './AboutUsData';
 // import { Link } from "react-router-dom";
 import '../App.css';
