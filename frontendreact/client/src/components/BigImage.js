@@ -112,9 +112,11 @@ const styles = {
             </Button> 
             </Link>
 
-            <Button onClick = {handleClick} className={classes.buttonDesktop} style={{backgroundColor:"white", color: 'black', borderRadius: 50, width:'300px', position: 'absolute', top:'70%', right: '5%'}} variant="contained">
+            <Link to={'../AboutUs'}>
+            <Button className={classes.buttonDesktop} style={{backgroundColor:"white", color: 'black', borderRadius: 50, width:'300px', position: 'absolute', top:'70%', right: '5%'}} variant="contained">
             Vem vi är..
             </Button> 
+            </Link>
         </div>
     
          )}
@@ -137,9 +139,12 @@ const styles = {
                     </Button> 
                     </Link>
 
-
-                    <Button onClick = {handleClick} className={classes.buttonAboutMobile} style={{backgroundColor:"white", color:"black", width: '400px', borderRadius: 50, position:'absolute', top: '50%', left: '10%' }} variant="contained">
+                    <Link to ={'./AboutUs'}style={{textDecorationLine: 'none', width:"200px"}}>
+                    <Button
+                    className={classes.buttonAboutMobile} style={{backgroundColor:"white", color:"black", width: '400px', borderRadius: 50, position:'absolute', top: '50%', left: '10%' }} variant="contained">
                     Vem vi är..</Button> 
+                    </Link>
+              
                 </div>
               
              

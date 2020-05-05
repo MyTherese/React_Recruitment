@@ -4,8 +4,6 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
@@ -13,20 +11,11 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import UseForminlog from './UseForminlog';
 import ValidateForm from './ValidateForm';
+import './Form.css';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -48,12 +37,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn() {
+
+
+export default function Login () {
   const classes = useStyles();
-  // const { } = UseForm(submit, ValidateForm );
+  const {disable, errors, handleChange, handleSubmit, values, 
+      } = UseForminlog (submit, ValidateForm);
+        // console.log(values);
+ 
+
+  // CALLBACK
+  function submit() {
+    alert("Succes!")
+    console.log('submitted succesfully');
+  }
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container 
+    onSubmit= {handleSubmit}
+    component="main" 
+    maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -69,35 +72,47 @@ export default function SignIn() {
             required
             fullWidth
             id="email"
+            type="email"
             label="Email Address"
+            onChange={handleChange}
+            // disable={disable}
             name="email"
+            value={values.email}
             autoComplete="email"
             autoFocus
           />
+            {errors.email && <p className="errorEmail">{errors.email}</p>}
+
+
+
           <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
+            onChange={handleChange}
+            // disable={disable}
             name="password"
+            value={values.password}
             label="Password"
             type="password"
             id="password"
             autoComplete="current-password"
           />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
+            {errors.password && <p className="errorPassword">{errors.password}</p>}
+
+
           <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            disabled= {disable}
           >
             Sign In
           </Button>
+          {/* fungerar ej  */}
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
@@ -113,7 +128,7 @@ export default function SignIn() {
         </form>
       </div>
       <Box mt={8}>
-        <Copyright />
+      
       </Box>
     </Container>
   );

@@ -4,7 +4,7 @@ import React, {Fragment} from 'react';
 import FormApply from './components/form/FormApply';
 import ListCurrentJobs from './components/header/ListCurrentJobs';
 import LogIn from './components/form/LogIn';
-import ListJobs from './components/ListJobs';
+// import ListJobs from './components/ListJobs';
 import DownloadFiles from './components/DownloadFiles';
 import AboutUs from './components/aboutUs/AboutUs';
 import Home from './components/Home';
@@ -43,7 +43,7 @@ import {
                                     <Route path="/FormApply" component={FormApply}/>
                                     <Route path ="/ListCurrentJobs" component= {ListCurrentJobs}/>
                                     <Route path="/LogIn" component={LogIn}/>
-                                    <Route path="/ListJobs" component={ListJobs}/>
+                                    {/* <Route path="/ListJobs" component={ListJobs}/> */}
                                     <Route path="/DownloadFiles" component={DownloadFiles}/>
                                     <Route path="/AboutUs" component={AboutUs}/>
                               </Switch>

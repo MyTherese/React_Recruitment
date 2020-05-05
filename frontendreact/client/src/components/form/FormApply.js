@@ -1,6 +1,4 @@
 import React from 'react';
-import { useform } from 'react-hook-form';
-import ReactDOM from 'react-dom';
 import DownloadFiles from '../DownloadFiles';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
@@ -48,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const FormApply = () => {
-  const {handleChange,handleSubmit,values,errors,checked, setValues,handleClear
+  const {handleChange,handleSubmit,values,errors,checked, setValues,handleClear, disable
       } = UseForm(submit, ValidateForm);
 
 
@@ -60,17 +58,18 @@ const FormApply = () => {
   function submit() {
     console.log('submitted succesfully');
   }
-
+ 
 
   return (
     <div>
       <form
+        // disable={!disable}
         value={setValues}
         name="form"
         onSubmit={handleSubmit}
         className={classes.form}
-        noValidate
         autoComplete="off"
+        noValidate
       >
         <h1>Personal Information</h1>
         <h2>Tell us something about yourself</h2>
@@ -88,6 +87,7 @@ const FormApply = () => {
               type="name"
               value={values.name}
               onChange={handleChange}
+              disable={disable}
             />
 
             {errors.name && <p className="errorName">{errors.name}</p>}
@@ -103,9 +103,10 @@ const FormApply = () => {
               type="email"
               value={values.email}
               onChange={handleChange}
+              disable={disable}
              
             />
-            {errors.email && <p className="errors">{errors.email}</p>}
+            {errors.email && <p className="errorEmail">{errors.email}</p>}
 
             {/*TELEPHONE  */}
             <TextField
@@ -117,6 +118,7 @@ const FormApply = () => {
               type="telephone"
               value={values.telephone}
               onChange={handleChange}
+              disable={disable}
             />
             {errors.telephone && (
               <p className="errorTelephone">{errors.telephone}</p>
@@ -162,10 +164,11 @@ const FormApply = () => {
             className={classes.button}
             variant="contained"
             color="primary"
-            disabled= {!checked }
+            disabled= {!checked, !disable}
           >
             Submit application
           </Button>
+          {errors.button && <p className="errorButton">{errors.button}</p>}
        
         </div>
 

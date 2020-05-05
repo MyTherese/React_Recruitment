@@ -9,16 +9,10 @@ const [values, setValues] = useState({ name:"", email: "", telephone:""});
 const [checked, setIsChecked] = useState (false);
 const [errors, setErrors] = useState({});
 const [isSubmitting, setIsSubmitting] = useState(false);
+const [disable, setDisable] = useState(false);
 
 
-
-// lifecyclemethod errorhandeling 
-    useEffect (() => {
-            if (Object.keys(errors).length === 0)  {
-            callback();
-        }
-
-        }, [errors]);
+ 
 
 
 
@@ -38,11 +32,12 @@ const [isSubmitting, setIsSubmitting] = useState(false);
             });
 
             console.log(e.target.value)
-            
-            setValues(values => ({
+            const {name, value} = e.target;
+            setValues({
                     ...values,
-                    [e.target.name]:e.target.value
-                }));
+                    [name]:value
+                });
+            
 
                 // const { name, value } = e.target;
                 // setValues(prevState => ({ ...prevState, [name]: value }));
@@ -57,6 +52,7 @@ const [isSubmitting, setIsSubmitting] = useState(false);
             setErrors(ValidateForm(values));
             setIsSubmitting(true);
             setIsChecked(true);
+            setDisable(true);
 
 
                 axios
@@ -73,6 +69,19 @@ const [isSubmitting, setIsSubmitting] = useState(false);
    
                 })};
 
+                useEffect (() => {
+                    if (Object.keys(errors).length === 0 && isSubmitting)  {
+                    callback();
+                }
+        
+                }, [errors]);
+
+             
+
+
+
+
+
 
 
 
@@ -84,6 +93,7 @@ return {
     errors,
     checked,
     setIsChecked,
+    disable,
   
  
   

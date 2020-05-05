@@ -63,8 +63,8 @@ const useStyles = makeStyles({
 
 
     <Link to = "/LogIn" >  
-        <List>
-        {['Jobs', 'Inlogg for admin'].map((text, index) => (
+        <List style= {{color:'black', textDecorationLine: 'none'}}>
+        {['Start', 'Inlogg for admin'].map((text, index) => (
              <ListItem button key={text}>
              <ListItemText 
              style={{padding:'5px'}}

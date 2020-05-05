@@ -2,19 +2,6 @@
 
 
 
-
-
-
-chrome problems
-[forkpty: Resource temporarily unavailable]
-[Could not create a new process and open a pseudo-tty.]
-
-
-[forkpty: Resource temporarily unavailable]
-[Could not create a new process and open a pseudo-tty.]
-
-
-
 solution for cors
 
 https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9
@@ -36,9 +23,18 @@ ALTER TABLE users ADD download BLOB;
 Ändra på colum namn 
 ALTER TABLE users RENAME COLUMN download TO files;
 
-ALTER TABLE users
-DROP active;
 
+ALTER TABLE jobs
+ADD FOREIGN KEY (userId) 
+REFERENCES users (userId);
+
+
+ALTER TABLE jobs 
+ADD CONSTRAINT fk_userId FOREIGN KEY (userId)
+REFERENCES users (userId);
+
+
+ADD userId INT(10) unsigned AFTER jobsId;
 
 
 
@@ -48,6 +44,6 @@ Executing (default): SHOW INDEX FROM `images`
 Drop and Resync with { force: true }
 
 
-
+Lösnig Access-Control-Allow-Origin * for local use not for deploy!! 
     
 

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import { makeStyles} from '@material-ui/core/styles';
-import {Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography} from '@material-ui/core';
+import {Card, CardActionArea, CardContent, CardMedia, Typography} from '@material-ui/core';
 import Jobs from '../pictures/Jobs.jpeg';
 
 
@@ -65,22 +65,24 @@ function DataFetching ()  {
 
         // </div>
         <Card className={classes.root}>
-        <h2>Current applications</h2>
+        <h1>Current job openings!</h1>
       
         <CardMedia title="company"/>
        
-             <img src={Jobs} alt="belecoJobs" style={{width:'100%'}}/>
+             <img src={Jobs} alt="belecoJobs" style={{width:'100%', height: '450px'}}/>
         
         <CardActionArea>
         {jobs.map(post => (
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p" >
-            {post.title} 
-            {post.description} 
-            {post.department} 
+            <Typography variant="body2" color="textSecondary" component="p" style={{backgroundColor:'lightGrey'}}>
+              <ul style= {{listStyle:'none'}}>
+                  <li>Titel: {post.title}</li>
+                  <li>Description: {post.description}</li>
+                  <li>Department: {post.department}</li>
+              </ul>
             </Typography>
           </CardContent>
-          ))}
+          ))} 
         </CardActionArea>
   
       </Card>

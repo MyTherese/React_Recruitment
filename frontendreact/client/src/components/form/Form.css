@@ -19,6 +19,20 @@
     font-size: 18px;
 }
 
+.errorEmail{
+    color:red;
+    font-size: 18px;
+}
+.errorButton{
+    color:red;
+    font-size: 18px;
+}
+
+.errorPassword{
+    color:red;
+    font-size: 18px;
+}
+
 
 
 
